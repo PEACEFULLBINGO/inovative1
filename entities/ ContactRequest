@@ -1,0 +1,35 @@
+{
+  "name": "ContactRequest",
+  "type": "object",
+  "properties": {
+    "worker_id": {
+      "type": "string",
+      "description": "ID of the worker being contacted"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_phone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "declined"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "worker_id",
+    "customer_name"
+  ]
+}
