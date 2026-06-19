@@ -1,0 +1,135 @@
+{
+  "name": "Worker",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Full legal name"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Public display name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "mobile": {
+      "type": "string",
+      "description": "10-digit mobile number"
+    },
+    "city": {
+      "type": "string",
+      "description": "City of operation"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "Plumber",
+        "Electrician",
+        "Carpenter",
+        "Tutor",
+        "Driver",
+        "House Help",
+        "Freelancer",
+        "Painter",
+        "AC Technician",
+        "Mechanic"
+      ],
+      "description": "Service category"
+    },
+    "native_language": {
+      "type": "string",
+      "enum": [
+        "Hindi",
+        "English",
+        "Marathi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Gujarati",
+        "Kannada",
+        "Malayalam",
+        "Punjabi"
+      ],
+      "description": "Native language"
+    },
+    "english_proficiency": {
+      "type": "string",
+      "enum": [
+        "None",
+        "Basic",
+        "Conversational",
+        "Fluent"
+      ],
+      "description": "English speaking ability"
+    },
+    "other_languages": {
+      "type": "string",
+      "description": "Comma-separated additional languages"
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "Available today",
+        "Available this week",
+        "Weekends only",
+        "Part-time"
+      ],
+      "description": "Current availability"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short profile description"
+    },
+    "experience_years": {
+      "type": "number",
+      "description": "Years of experience"
+    },
+    "hourly_rate": {
+      "type": "number",
+      "description": "Hourly rate in INR"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Verified",
+        "Flagged"
+      ],
+      "default": "Pending",
+      "description": "Admin verification status"
+    },
+    "profile_score": {
+      "type": "number",
+      "description": "Profile completion score 0-100"
+    },
+    "profile_image_url": {
+      "type": "string",
+      "description": "Profile photo URL"
+    },
+    "services": {
+      "type": "string",
+      "description": "Comma-separated list of specific services offered"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Average rating out of 5"
+    },
+    "total_reviews": {
+      "type": "number",
+      "description": "Total number of reviews"
+    }
+  },
+  "required": [
+    "full_name",
+    "display_name",
+    "email",
+    "mobile",
+    "city",
+    "role",
+    "native_language",
+    "english_proficiency",
+    "availability"
+  ]
+}
