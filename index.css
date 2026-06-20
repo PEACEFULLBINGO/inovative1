@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tttailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 150 0% 0%;
+    --card: 40 15% 98%;
+    --card-foreground: 150 10% 10%;
+    --popover: 40 15% 98%;
+    --popover-foreground: 150 10% 10%;
+    --primary: 174 78% 26%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 12% 92%;
+    --secondary-foreground: 150 10% 15%;
+    --muted: 40 10% 93%;
+    --muted-foreground: 150 5% 42%;
+    --accent: 40 12% 92%;
+    --accent-foreground: 150 10% 15%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 35 12% 82%;
+    --input: 35 12% 85%;
+    --ring: 174 78% 26%;
+    --chart-1: 174 78% 26%;
+    --chart-2: 43 74% 66%;
+    --chart-3: 150 40% 35%;
+    --chart-4: 27 87% 67%;
+    --chart-5: 197 37% 24%;
+    --radius: 0.75rem;
+    --font-heading: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 40 15% 96%;
+    --sidebar-foreground: 150 10% 15%;
+    --sidebar-primary: 174 78% 26%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 12% 92%;
+    --sidebar-accent-foreground: 150 10% 15%;
+    --sidebar-border: 35 12% 88%;
+    --sidebar-ring: 174 78% 26%;
+  }
+
+  .dark {
+    --background: 150 8% 7%;
+    --foreground: 40 10% 93%;
+    --card: 150 8% 10%;
+    --card-foreground: 40 10% 93%;
+    --popover: 150 8% 10%;
+    --popover-foreground: 40 10% 93%;
+    --primary: 174 50% 50%;
+    --primary-foreground: 150 8% 7%;
+    --secondary: 150 6% 16%;
+    --secondary-foreground: 40 10% 90%;
+    --muted: 150 6% 16%;
+    --muted-foreground: 150 5% 60%;
+    --accent: 150 6% 16%;
+    --accent-foreground: 40 10% 90%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 6% 18%;
+    --input: 150 6% 18%;
+    --ring: 174 50% 50%;
+    --chart-1: 174 50% 50%;
+    --chart-2: 43 74% 66%;
+    --chart-3: 150 40% 50%;
+    --chart-4: 27 87% 67%;
+    --chart-5: 197 37% 50%;
+    --sidebar-background: 150 8% 8%;
+    --sidebar-foreground: 40 10% 90%;
+    --sidebar-primary: 174 50% 50%;
+    --sidebar-primary-foreground: 150 8% 7%;
+    --sidebar-accent: 150 6% 14%;
+    --sidebar-accent-foreground: 40 10% 90%;
+    --sidebar-border: 150 6% 16%;
+    --sidebar-ring: 174 50% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 999px;
+}
+
+/* Glass effect utility */
+.glass {
+  background: hsla(var(--card), 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
